@@ -1,0 +1,2 @@
+-- Dirty Read not in PG, because MVCC.
+-- PG也沒有shared lock
