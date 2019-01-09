@@ -10,6 +10,7 @@ CREATE TABLE `products` (
 	`id` INT(11) NOT NULL,
 	`name` VARCHAR(40) NOT NULL,
 	`price` INT(11) NOT NULL,
+	`utime` TIMESTAMP NULL DEFAULT NULL,    
 	PRIMARY KEY (`id`)
 )
 ;
@@ -27,9 +28,9 @@ CREATE TABLE `order_details` (
 INSERT INTO orders VALUES (1, 0);
 INSERT INTO orders VALUES (2, 0);
 
-INSERT INTO products VALUES (1, 'prd-1', 1);
-INSERT INTO products VALUES (2, 'prd-10', 10);
-INSERT INTO products VALUES (3, 'prd-100', 100);
+INSERT INTO products VALUES (1, 'prd-1', 1, now());
+INSERT INTO products VALUES (2, 'prd-10', 10, now());
+INSERT INTO products VALUES (3, 'prd-100', 100, now());
 
 INSERT INTO order_details VALUES (1, 1, 1, 1);
 INSERT INTO order_details VALUES (1, 2, 1, 10);
